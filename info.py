@@ -14,20 +14,23 @@ class Order:
         self.numOfOrders = num
 
     def getTotal(self):
+        tax = 1.13
         if self.numOfOrders >= 3:
             newPrice = self.orderPrice * self.numOfOrders
+            newPrice = newPrice * 1.13
             total = newPrice - newPrice * 0.15
             
         elif self.numOfOrders < 3:
-            total = self.orderPrice * self.numOfOrders
+            newPrice = self.orderprice * self.numOfOrders
+            total = newPrice * 1.13
             
         return total
     
     def toStr(self):
         orderSize = str(self.orderSize)
         orderPrice = str(self.orderPrice)
-        numOfOrder = str(self.numOfOrder)
+        numOfOrders = str(self.numOfOrder)
         
-        info = f"Pizza Size: {self.orderSize} \n Quantity: {self.numOfOrders}"
+        info = f"Pizza Size: {orderSize} \n Quantity: {numOfOrders}"
         
         return info
