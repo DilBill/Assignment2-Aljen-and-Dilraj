@@ -23,4 +23,11 @@ class Order:
             
         return total
     
-
+    def toStr(self):
+        orderSize = str(self.orderSize)
+        orderPrice = str(self.orderPrice)
+        numOfOrder = str(self.numOfOrder)
+        
+        info = f"Pizza Size: {self.orderSize} \n Quantity: {self.numOfOrders}"
+        
+        return info
