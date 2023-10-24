@@ -13,3 +13,14 @@ class Order:
         self.orderPrice = price
         self.numOfOrders = num
 
+    def getTotal(self):
+        if self.numOfOrders >= 3:
+            newPrice = self.orderPrice * self.numOfOrders
+            total = newPrice - newPrice * 0.15
+            
+        elif self.numOfOrders < 3:
+            total = self.orderPrice * self.numOfOrders
+            
+        return total
+    
+
