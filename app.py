@@ -35,7 +35,17 @@ while True:
     elif size != 1 or size != 2 or size != 3 or size != 4:
         print('Invaild Size Try Again')
 
+# ask the user how many pizza they would like        
+numPizza = int(input('How many pizzas would you like to order '))
+    
+# create the object pizza
+pizza = Order(size, price, numPizza)
+# create the object user
+user = User(name, email, address )
 
+print(pizza.getTotal())
+print(f'The order will be deliverd to {user.userName} at {user.userAddress}')
+print(f'A copy of the reciept will be sent to {user.userEmail}')
 
     
     
