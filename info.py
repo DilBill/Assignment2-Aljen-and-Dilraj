@@ -37,7 +37,7 @@ class Order:
         # converts all variables to string using str() method
         orderSize = str(self.orderSize)
         orderPrice = str(self.orderPrice)
-        numOfOrders = str(self.numOfOrder)
+        numOfOrders = str(self.numOfOrders)
         # create a string that can be printed to the user
         info = f"Pizza Size: {orderSize} \n Quantity: {numOfOrders}"
         
