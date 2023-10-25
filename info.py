@@ -35,7 +35,14 @@ class Order:
     
     def toStr(self):
         # converts all variables to string using str() method
-        orderSize = str(self.orderSize)
+        if self.orderSize == 1:
+            orderSize = "small"
+        elif self.orderSize == 2:
+            orderSize = "medium"
+        elif self.orderSize == 3:
+            orderSize = "large"
+        elif self.orderSize == 4:
+            orderSize = "extra large"
         orderPrice = str(self.orderPrice)
         numOfOrders = str(self.numOfOrders)
         # create a string that can be printed to the user
